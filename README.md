@@ -2,19 +2,13 @@
 
 This is the repository for team "If it works, it works" and their submission to the CTP Cohort 9 hackathon.
 
-### Dealing with Merge Conflicts
-
-Since merge conflicts where different people push work to the same file might get problematic, I (JasonWu00, owner of this repo) suggest that everyone put their work in [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) and push their work to the main branch via [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Yes, this is going to be a hassle, but trying to coordinate every push to github is not a solution either.
-
-Unless everyone manages to coordinate git pushes over Discord, in which case nevermind.
-
 ### Purpose of the Project
 
-To be determined.
+(temporary description)
 
+The purpose of this project is to create a Generative Adverserial Network (GAN) that takes an input image and returns an (for lack of a better word) "animefied" output image, as well as an associated front end website to allow users to make use of the GAN without having to clone this repo and run things on the command line.
 
-
-### Reference
+### References
 
 [1] Chen, Yang, Yu-Kun Lai, and Yong-Jin Liu. "CartoonGAN: Generative Adversarial Networks for Photo Cartoonization." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.
 
