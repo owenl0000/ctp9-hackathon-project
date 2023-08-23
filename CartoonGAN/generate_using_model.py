@@ -5,13 +5,14 @@ import sys
 sys.path.append("pytorch-CartoonGAN")
 
 import os
-import time
-import pickle
 import argparse
 import torch
-from torch import nn
+from torchvision.transforms import functional
 import networks
+from PIL import Image
 
+# argument parsed from the command line
+# lifted from train.py
 parser = argparse.ArgumentParser()
 parser.add_argument('--name', required=False, default='CartoonGan_Converter',  help='')
 parser.add_argument('--batch_size', type=int, default=8, help='batch size')
@@ -22,19 +23,30 @@ args = parser.parse_args()
 
 def main():
     """
-    Main function where the unpickling and animefying ocurs.
+    Main function.
 
     This function takes in nothing.
     This function loads the GAN model from a pre-established directory
     and feeds it an image from another pre-established directory.
     The result output image is stored in a third directory.
+    Currently the directories are placeholders and
+    will be replaced in another commit.
     """
     # load the model
     generator = networks.generator(args.in_g_channel, args.out_g_channel, args.generator_features, args.batch_size)
     generator.load_state_dict(torch.load(os.path.join(args.name + '_results',  'generator_param.pkl')))
     generator.eval()
     # pass an image to the model
+    # reference: https://discuss.pytorch.org/t/how-to-read-just-one-pic/17434
+    # replace placeholders with dynamic paths later
+    input = Image.open("PLACEHOLDER.png")
+    tensor = functional.to_tensor(input)
+    tensor.unsqueeze(0)
+    output_tensor = generator(tensor)
     # save the output image
+    output_tensor.squeeze(0)
+    output = functional.to_pil_image(output_tensor)
+    output = output.save("PLACEHOLDER_OUTPUT.png")
     return 0
 
 if __name__ == "__main__":
