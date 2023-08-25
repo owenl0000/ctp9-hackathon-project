@@ -15,7 +15,9 @@ module.exports = {
       colors: {
         'blue-900': '#1A237E',
         'turquoise-400': '#40E0D0',
-        'backg-white' : 'F5F5F5'
+        'backg-white' : 'F5F5F5',
+        'bg-turquoise-dark' : '#30C0B0',
+        'bg-deep-blue' : '#1A237E'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

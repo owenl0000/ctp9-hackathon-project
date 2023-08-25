@@ -11,7 +11,9 @@ function Header() {
           <a href="#service" className="font-trend mb-2">Service</a>
           <a href="#tutorial" className="font-trend mb-2">Tutorial</a>
           <a href="#contact" className="font-trend mb-2">Contact</a>
-          <button className="font-trend bg-turquoise text-off-white border pb-3 px-1 p-2 cursor-pointer rounded-md flex items-center">Cartoonize</button>
+          <a href="/cartoonize" className="font-trend bg-turquoise text-off-white border pb-3 px-1 p-2 cursor-pointer rounded-md flex items-center">
+          Cartoonize
+        </a>
         </nav>
       </header>
     );

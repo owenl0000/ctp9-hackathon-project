@@ -6,9 +6,9 @@ import './Slideshow.css';
 export default function Slideshow() {
   const [slideIndex, setSlideIndex] = useState(0);
   const images = [
-    '/images/hotels.jpg',
-    '/images/statue.jpg',
-    '/images/empirestateb.webp',
+    '/images/slideshow1.jpg',
+    '/images/slideshow2.jpg',
+    '/images/slideshow3.jpg',
   ];
 
   useEffect(() => {
